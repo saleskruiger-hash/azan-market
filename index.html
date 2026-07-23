@@ -76,69 +76,45 @@ color:white;
 border:none;
 cursor:pointer;
 }
+.featured{
+padding:60px 8%;
+}
 
-</style>
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
 
-</head>
+.card{
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
 
-<body>
+.card:hover{
+transform:translateY(-8px);
+}
 
-<header>
+.card h3{
+margin-bottom:15px;
+color:#111827;
+}
 
-<div class="logo">AZAN MARKET</div>
+.price{
+font-size:28px;
+font-weight:bold;
+color:#2563eb;
+margin:15px 0;
+}
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Websites</a>
-<a href="#">Categories</a>
-<a href="#">Contact</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h1>Global Guest Post Marketplace</h1>
-
-<p>Buy High Authority Guest Posts From Trusted Publishers</p>
-
-<div class="search-box">
-<input type="text" placeholder="Search Websites...">
-<button>Search</button>
-</div>
-
-</section>
-<section>
-
-<h2>Featured Websites</h2>
-
-<div>
-
-<h3>TechCrunch.com</h3>
-<p>Country: USA</p>
-<p>DA: 93</p>
-<p>Traffic: 14M+</p>
-<p>Price: $500</p>
-<button>Buy Now</button>
-
-<hr>
-
-<h3>Mashable.com</h3>
-<p>Country: USA</p>
-<p>DA: 92</p>
-<p>Traffic: 18M+</p>
-<p>Price: $350</p>
-<button>Buy Now</button>
-
-<hr>
-
-<h3>CelebReports.de</h3>
-<p>Country: Germany</p>
-<p>DA: 67</p>
-<p>Traffic: 280K+</p>
-<p>Price: $150</p>
-<button>Buy Now</button>
-
-</div>
-
-</section>
+.buy{
+display:inline-block;
+background:#2563eb;
+color:white;
+padding:12px 24px;
+border-radius:8px;
+text-decoration:none;
+}
