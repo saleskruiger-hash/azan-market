@@ -15,12 +15,12 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#f5f7fb;
+background:#f4f7fb;
+color:#222;
 }
 
 header{
 background:#111827;
-color:white;
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
@@ -30,20 +30,21 @@ align-items:center;
 .logo{
 font-size:32px;
 font-weight:bold;
+color:#fff;
 }
 
 nav a{
-color:white;
+color:#fff;
 text-decoration:none;
 margin-left:25px;
 font-weight:bold;
 }
 
 .hero{
-background:linear-gradient(90deg,#2563eb,#0ea5e9);
-color:white;
-padding:80px 20px;
+background:linear-gradient(135deg,#2563eb,#0ea5e9);
+padding:90px 20px;
 text-align:center;
+color:white;
 }
 
 .hero h1{
@@ -53,58 +54,60 @@ margin-bottom:20px;
 
 .hero p{
 font-size:22px;
-margin-bottom:30px;
+margin-bottom:35px;
 }
 
-.search-box{
+.search{
 max-width:700px;
 margin:auto;
 display:flex;
 }
 
-.search-box input{
+.search input{
 flex:1;
 padding:18px;
 font-size:18px;
 border:none;
+outline:none;
 }
 
-.search-box button{
+.search button{
 padding:18px 35px;
 background:#111827;
-color:white;
+color:#fff;
 border:none;
 cursor:pointer;
 }
+
 .featured{
-padding:60px 8%;
+padding:70px 8%;
 }
 
-.cards{
+.featured h2{
+font-size:40px;
+margin-bottom:40px;
+text-align:center;
+}
+
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+gap:30px;
 }
 
 .card{
-background:#fff;
+background:white;
 padding:25px;
 border-radius:12px;
 box-shadow:0 8px 20px rgba(0,0,0,.1);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
 }
 
 .card h3{
 margin-bottom:15px;
-color:#111827;
 }
 
 .price{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 color:#2563eb;
 margin:15px 0;
@@ -112,9 +115,136 @@ margin:15px 0;
 
 .buy{
 display:inline-block;
+padding:12px 25px;
 background:#2563eb;
-color:white;
-padding:12px 24px;
-border-radius:8px;
+color:#fff;
 text-decoration:none;
+border-radius:8px;
 }
+.card p{
+margin:8px 0;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:60px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">AZAN MARKET</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Websites</a>
+<a href="#">Categories</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Global Guest Post Marketplace</h1>
+
+<p>Buy High Authority Guest Posts From Trusted Publishers</p>
+
+<div class="search">
+<input type="text" placeholder="Search websites...">
+<button>Search</button>
+</div>
+
+</section>
+
+<section class="featured">
+
+<h2>Featured Websites</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>TechCrunch.com</h3>
+<p>🌍 USA</p>
+<p>DA: 93</p>
+<p>Traffic: 14M+</p>
+<div class="price">$500</div>
+<a class="buy" href="#">Buy Now</a>
+</div>
+
+<div class="card">
+<h3>Mashable.com</h3>
+<p>🌍 USA</p>
+<p>DA: 92</p>
+<p>Traffic: 18M+</p>
+<div class="price">$350</div>
+<a class="buy" href="#">Buy Now</a>
+</div>
+
+<div class="card">
+<h3>CelebReports.de</h3>
+<p>🌍 Germany</p>
+<p>DA: 67</p>
+<p>Traffic: 280K+</p>
+<div class="price">$150</div>
+<a class="buy" href="#">Buy Now</a>
+</div>
+
+</div>
+
+</section><section class="featured">
+
+<h2 style="margin-top:60px;">Browse Categories</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Technology</h3>
+<p>150+ Websites</p>
+</div>
+
+<div class="card">
+<h3>Business</h3>
+<p>120+ Websites</p>
+</div>
+
+<div class="card">
+<h3>Health</h3>
+<p>90+ Websites</p>
+</div>
+
+<div class="card">
+<h3>Crypto</h3>
+<p>70+ Websites</p>
+</div>
+
+<div class="card">
+<h3>News</h3>
+<p>110+ Websites</p>
+</div>
+
+<div class="card">
+<h3>Casino</h3>
+<p>80+ Websites</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Azan Market - All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
