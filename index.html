@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azan Market</title>
+<title>AZAN MARKET</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -28,7 +27,7 @@ align-items:center;
 }
 
 .logo{
-font-size:32px;
+font-size:30px;
 font-weight:bold;
 color:#fff;
 }
@@ -36,7 +35,7 @@ color:#fff;
 nav a{
 color:#fff;
 text-decoration:none;
-margin-left:25px;
+margin-left:20px;
 font-weight:bold;
 }
 
@@ -44,7 +43,7 @@ font-weight:bold;
 background:linear-gradient(135deg,#2563eb,#0ea5e9);
 padding:90px 20px;
 text-align:center;
-color:white;
+color:#fff;
 }
 
 .hero h1{
@@ -54,60 +53,55 @@ margin-bottom:20px;
 
 .hero p{
 font-size:22px;
-margin-bottom:35px;
+margin-bottom:30px;
 }
 
 .search{
+display:flex;
 max-width:700px;
 margin:auto;
-display:flex;
 }
 
 .search input{
 flex:1;
 padding:18px;
-font-size:18px;
 border:none;
-outline:none;
+font-size:18px;
 }
 
 .search button{
 padding:18px 35px;
-background:#111827;
-color:#fff;
 border:none;
+background:#111827;
+color:white;
 cursor:pointer;
 }
 
-.featured{
+section{
 padding:70px 8%;
 }
 
-.featured h2{
-font-size:40px;
-margin-bottom:40px;
+h2{
 text-align:center;
+font-size:42px;
+margin-bottom:40px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
 .card{
-background:white;
+background:#fff;
 padding:25px;
 border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,.1);
-}
-
-.card h3{
-margin-bottom:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
 .price{
-font-size:30px;
+font-size:28px;
 font-weight:bold;
 color:#2563eb;
 margin:15px 0;
@@ -121,26 +115,8 @@ color:#fff;
 text-decoration:none;
 border-radius:8px;
 }
-.card p{
-margin:8px 0;
-}
-
-footer{
-background:#111827;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:60px;
-}
 .testimonials{
-padding:80px 8%;
-background:white;
-}
-
-.testimonials h2{
-text-align:center;
-font-size:42px;
-margin-bottom:50px;
+background:#fff;
 }
 
 .testimonial-grid{
@@ -150,7 +126,7 @@ gap:30px;
 }
 
 .testimonial{
-background:#f5f7fb;
+background:#f8fafc;
 padding:30px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,.08);
@@ -158,78 +134,17 @@ box-shadow:0 5px 15px rgba(0,0,0,.08);
 
 .testimonial p{
 font-size:18px;
-margin-bottom:20px;
 line-height:1.6;
-}
-
-.testimonial h4{
-color:#2563eb;
- }
-.testimonial{
-padding:80px 8%;
-background:white;
-text-align:center;
-}
-
-.testimonial-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-margin-top:50px;
-}
-
-.testimonial-card{
-background:#f8fafc;
-padding:30px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.testimonial p{
-font-size:18px;
-line-height:1.7;
 margin-bottom:20px;
 }
 
 .testimonial h4{
 color:#2563eb;
 }
-.faq{
-padding:80px 8%;
-background:#f8fafc;
-}
 
-.faq h2{
+.contact{
+background:#fff;
 text-align:center;
-font-size:48px;
-margin-bottom:50px;
-}
-
-.faq-item{
-background:white;
-padding:20px;
-margin-bottom:20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.faq-item h3{
-margin-bottom:10px;
-color:#2563eb;
-}
-
-.faq-item p{
-line-height:1.7;
-}
- .contact{
-padding:80px 8%;
-background:white;
-text-align:center;
-}
-
-.contact h2{
-font-size:48px;
-margin-bottom:40px;
 }
 
 .contact form{
@@ -249,61 +164,26 @@ font-size:16px;
 
 .contact button{
 background:#2563eb;
-color:white;
+color:#fff;
 padding:15px 40px;
 border:none;
 border-radius:8px;
-font-size:18px;
 cursor:pointer;
-}
- .contact{
-    padding:80px 8%;
-    background:#fff;
-    text-align:center;
+font-size:18px;
 }
 
-.contact h2{
-    font-size:48px;
-    margin-bottom:40px;
+footer{
+background:#111827;
+color:#fff;
+text-align:center;
+padding:25px;
 }
 
-.contact form{
-    max-width:700px;
-    margin:auto;
-}
-
-.contact input,
-.contact textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:20px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-size:16px;
-}
-
-.contact button{
-    background:#2563eb;
-    color:#fff;
-    padding:15px 40px;
-    border:none;
-    border-radius:8px;
-    font-size:18px;
-    cursor:pointer;
-}
-
-.contact button:hover{
-    background:#1d4ed8;
-}
- 
 </style>
-
 </head>
-
 <body>
 
 <header>
-
 <div class="logo">AZAN MARKET</div>
 
 <nav>
@@ -312,31 +192,26 @@ cursor:pointer;
 <a href="#">Categories</a>
 <a href="#">Contact</a>
 </nav>
-
 </header>
 
 <section class="hero">
-
 <h1>Global Guest Post Marketplace</h1>
-
 <p>Buy High Authority Guest Posts From Trusted Publishers</p>
 
 <div class="search">
-<input type="text" placeholder="Search websites...">
+<input type="text" placeholder="Search Websites...">
 <button>Search</button>
 </div>
-
 </section>
 
-<section class="featured">
-
+<section>
 <h2>Featured Websites</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>TechCrunch.com</h3>
-<p>🌍 USA</p>
+<h3>TechCrunch</h3>
+<p>USA</p>
 <p>DA: 93</p>
 <p>Traffic: 14M+</p>
 <div class="price">$500</div>
@@ -344,8 +219,8 @@ cursor:pointer;
 </div>
 
 <div class="card">
-<h3>Mashable.com</h3>
-<p>🌍 USA</p>
+<h3>Mashable</h3>
+<p>USA</p>
 <p>DA: 92</p>
 <p>Traffic: 18M+</p>
 <div class="price">$350</div>
@@ -354,7 +229,7 @@ cursor:pointer;
 
 <div class="card">
 <h3>CelebReports.de</h3>
-<p>🌍 Germany</p>
+<p>Germany</p>
 <p>DA: 67</p>
 <p>Traffic: 280K+</p>
 <div class="price">$150</div>
@@ -363,9 +238,10 @@ cursor:pointer;
 
 </div>
 
-</section><section class="featured">
+</section>
+<section>
 
-<h2 style="margin-top:60px;">Browse Categories</h2>
+<h2>Browse Categories</h2>
 
 <div class="grid">
 
@@ -402,7 +278,8 @@ cursor:pointer;
 </div>
 
 </section>
- <section class="featured">
+
+<section>
 
 <h2>Why Choose Azan Market?</h2>
 
@@ -426,7 +303,8 @@ cursor:pointer;
 </div>
 
 </section>
- <section class="featured">
+
+<section>
 
 <h2>How It Works</h2>
 
@@ -434,68 +312,70 @@ cursor:pointer;
 
 <div class="card">
 <h3>1. Choose Website</h3>
-<p>Select the best website for your niche and budget.</p>
+<p>Select the best website for your niche.</p>
 </div>
 
 <div class="card">
 <h3>2. Place Order</h3>
-<p>Submit your guest post order with anchor text and URL.</p>
+<p>Submit your order with anchor text and URL.</p>
 </div>
 
 <div class="card">
-<h3>3. Publisher Publishes</h3>
-<p>The publisher reviews and publishes your article.</p>
-</div>
-
-<div class="card">
-<h3>4. Receive Live Link</h3>
-<p>Get your live guest post link and improve your SEO.</p>
+<h3>3. Get Published</h3>
+<p>Your article is published by the publisher.</p>
 </div>
 
 </div>
 
 </section>
- <section class="testimonials">
+
+<section class="testimonials">
 
 <h2>What Our Clients Say</h2>
 
 <div class="testimonial-grid">
 
 <div class="testimonial">
-<p>"Excellent service! My guest post was published within 48 hours."</p>
-<h4>- John Smith</h4>
+<p>"Excellent service! Published within 48 hours."</p>
+<h4>John Smith</h4>
 </div>
 
 <div class="testimonial">
-<p>"High quality websites and very professional support."</p>
-<h4>- Sarah Johnson</h4>
+<p>"Very professional support and quality websites."</p>
+<h4>Sarah Johnson</h4>
 </div>
 
 <div class="testimonial">
-<p>"Affordable pricing and fast delivery. Highly recommended."</p>
-<h4>- Michael Brown</h4>
+<p>"Affordable pricing and fast delivery."</p>
+<h4>Michael Brown</h4>
 </div>
 
 </div>
 
 </section>
- 
+
 <section class="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
 
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+<h2>Contact Us</h2>
 
-    </div>
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
 </section>
 
 <footer>
-    <p>© 2026 Azan Market - All Rights Reserved.</p>
+
+<p>© 2026 AZAN MARKET. All Rights Reserved.</p>
+
 </footer>
 
 </body>
