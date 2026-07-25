@@ -118,27 +118,9 @@ AZAN MARKET
 
 <div class="cart-box">
 
-<div class="item">
+<div id="cartItems"></div>
 
-<div>
-
-<h2>🔥 TechCrunch Guest Post</h2>
-
-<p>Permanent Dofollow Guest Post</p>
-
-</div>
-
-<div class="price">
-$500
-</div>
-
-</div>
-
-<div class="total">
-
-Total: $500
-
-</div>
+<div class="total" id="totalPrice"></div>
 
 <div class="checkout">
 
@@ -149,6 +131,46 @@ Total: $500
 </div>
 
 </div>
+<script>
 
+let product = JSON.parse(localStorage.getItem("cart"));
+
+if(product){
+
+document.getElementById("cartItems").innerHTML=`
+
+<div class="item">
+
+<div>
+
+<h2>${product.name}</h2>
+
+<p>${product.country}</p>
+
+<p>${product.category}</p>
+
+</div>
+
+<div class="price">
+
+$${product.price}
+
+</div>
+
+</div>
+
+`;
+
+document.getElementById("totalPrice").innerHTML="Total: $" + product.price;
+
+}else{
+
+document.getElementById("cartItems").innerHTML="<div class='empty'>Your Cart Is Empty</div>";
+
+document.getElementById("totalPrice").innerHTML="";
+
+}
+
+</script>
 </body>
 </html>
