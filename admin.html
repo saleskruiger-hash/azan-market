@@ -154,9 +154,65 @@ Add Product
 
 <script>
 
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+showProducts();
+
 function addProduct(){
 
+let website = document.getElementById("website").value;
+let country = document.getElementById("country").value;
+let category = document.getElementById("category").value;
+let price = document.getElementById("price").value;
+
+if(
+website=="" ||
+country=="" ||
+category=="" ||
+price==""
+){
+alert("Please fill all fields.");
+return;
+}
+
+products.push({
+website:website,
+country:country,
+category:category,
+price:price
+});
+
+localStorage.setItem("products",JSON.stringify(products));
+
+document.getElementById("website").value="";
+document.getElementById("country").value="";
+document.getElementById("category").value="";
+document.getElementById("price").value="";
+
+showProducts();
+
 alert("Product Added Successfully!");
+
+}
+
+function showProducts(){
+
+let html="";
+
+products.forEach(function(p){
+
+html += `
+<tr>
+<td>${p.website}</td>
+<td>${p.country}</td>
+<td>${p.category}</td>
+<td>$${p.price}</td>
+</tr>
+`;
+
+});
+
+document.getElementById("products").innerHTML = html;
 
 }
 
