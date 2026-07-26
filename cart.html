@@ -96,6 +96,20 @@ font-size:20px;
 padding:50px;
 color:#777;
 }
+.remove-btn{
+margin-top:10px;
+padding:10px 18px;
+background:#ef4444;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.remove-btn:hover{
+background:#dc2626;
+}
 </style>
 
 </head>
@@ -149,11 +163,15 @@ document.getElementById("cartItems").innerHTML=`
 
 <p>${product.category}</p>
 
-</div>
+<div>
 
 <div class="price">
-
 $${product.price}
+</div>
+
+<button class="remove-btn" onclick="removeCartItem()">
+🗑 Remove
+</button>
 
 </div>
 
@@ -168,6 +186,14 @@ document.getElementById("totalPrice").innerHTML="Total: $" + product.price;
 document.getElementById("cartItems").innerHTML="<div class='empty'>Your Cart Is Empty</div>";
 
 document.getElementById("totalPrice").innerHTML="";
+
+}
+
+function removeCartItem(){
+
+localStorage.removeItem("cart");
+
+location.reload();
 
 }
 
