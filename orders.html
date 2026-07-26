@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Orders - AZAN MARKET</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f7fb;
+}
+
+header{
+background:#111827;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:#fff;
+font-size:28px;
+font-weight:bold;
+}
+
+header a{
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+}
+
+.container{
+max-width:1100px;
+margin:40px auto;
+padding:20px;
+}
+
+.order-box{
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.order{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+border-bottom:1px solid #ddd;
+}
+
+.status{
+background:#f59e0b;
+color:#fff;
+padding:8px 15px;
+border-radius:20px;
+font-size:14px;
+font-weight:bold;
+}
+
+.empty{
+text-align:center;
+padding:40px;
+color:#777;
+font-size:18px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+AZAN MARKET
+</div>
+
+<a href="dashboard.html">Dashboard</a>
+
+</header>
+
+<div class="container">
+
+<h1 style="margin-bottom:25px;">My Orders</h1>
+
+<div class="order-box">
+
+<div id="ordersList"></div>
+
+</div>
+
+</div>
+
+<script>
+
+let order = JSON.parse(localStorage.getItem("order"));
+
+if(order){
+
+document.getElementById("ordersList").innerHTML = `
+
+<div class="order">
+
+<div>
+
+<h2>${order.product}</h2>
+
+<p>Website: ${order.website}</p>
+
+<p>Anchor: ${order.anchor}</p>
+
+<p>Price: $${order.price}</p>
+
+</div>
+
+<div>
+
+<div class="status">Pending</div>
+
+</div>
+
+</div>
+
+`;
+
+}else{
+
+document.getElementById("ordersList").innerHTML="<div class='empty'>No Orders Found</div>";
+
+}
+
+</script>
+
+</body>
+</html>
