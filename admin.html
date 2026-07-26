@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel - AZAN MARKET</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f7fb;
+}
+
+header{
+background:#111827;
+color:white;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+.container{
+max-width:1200px;
+margin:40px auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+margin-bottom:30px;
+}
+
+.card h2{
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:16px;
+}
+
+button{
+padding:14px 25px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table th,
+table td{
+padding:15px;
+border-bottom:1px solid #ddd;
+text-align:left;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+AZAN MARKET ADMIN
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Add New Guest Post</h2>
+
+<input id="website" placeholder="Website Name">
+
+<input id="country" placeholder="Country">
+
+<input id="category" placeholder="Category">
+
+<input id="price" placeholder="Price">
+
+<button onclick="addProduct()">
+Add Product
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Products</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Website</th>
+
+<th>Country</th>
+
+<th>Category</th>
+
+<th>Price</th>
+
+</tr>
+
+</thead>
+
+<tbody id="products">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+
+function addProduct(){
+
+alert("Product Added Successfully!");
+
+}
+
+</script>
+
+</body>
+</html>
