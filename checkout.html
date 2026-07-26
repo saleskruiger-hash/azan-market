@@ -109,7 +109,19 @@ grid-template-columns:1fr;
 
 <body>
 
-<h1>Checkout</h1>
+<header>
+
+<div class="logo">
+AZAN MARKET
+</div>
+
+<a href="cart.html">← Back To Cart</a>
+
+</header>
+
+<div class="container">
+
+<div class="box">
 
 <h2>Customer Information</h2>
 
@@ -141,7 +153,26 @@ TechCrunch Guest Post - $500
 Place Order
 </button>
 <script>
+</div>
 
+<div class="box">
+
+<h2>Order Summary</h2>
+
+<div class="summary-item">
+<span>🔥 TechCrunch Guest Post</span>
+<span>$500</span>
+</div>
+
+<hr><br>
+
+<div class="total">
+Total: $500
+</div>
+
+</div>
+
+</div>
 document.getElementById("placeOrder").onclick=function(){
 
 let fullname=document.getElementById("fullname").value;
