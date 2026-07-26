@@ -312,7 +312,7 @@ nav a:hover{
 <p>Buy High Authority Guest Posts From Trusted Publishers</p>
 
 <div class="search">
-<input type="text" placeholder="Search Websites...">
+<input type="text" id="searchBox" placeholder="Search Websites..." onkeyup="searchProducts()">
 <button>Search</button>
 </div>
 </section>
@@ -368,7 +368,7 @@ nav a:hover{
 
 <h2>Browse Categories</h2>
 
-<div class="grid">
+<div class="grid" id="productList">
 
 <div class="card">
 <h3>Technology</h3>
@@ -506,13 +506,21 @@ nav a:hover{
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
-if(products.length > 0){
+showProducts(products);
 
-let html = "";
+function showProducts(list){
 
-products.forEach(function(p){
+let html="";
 
-html += `
+if(list.length==0){
+
+html="<h3>No website found.</h3>";
+
+}else{
+
+list.forEach(function(p){
+
+html+=`
 <div class="card">
 
 <h3>${p.website}</h3>
@@ -532,7 +540,27 @@ html += `
 
 });
 
-document.getElementById("productGrid").innerHTML = html;
+}
+
+document.getElementById("productList").innerHTML=html;
+
+}
+
+function searchProducts(){
+
+let keyword=document.getElementById("searchBox").value.toLowerCase();
+
+let filtered=products.filter(function(p){
+
+return(
+p.website.toLowerCase().includes(keyword) ||
+p.country.toLowerCase().includes(keyword) ||
+p.category.toLowerCase().includes(keyword)
+);
+
+});
+
+showProducts(filtered);
 
 }
 
