@@ -217,9 +217,9 @@ Permanent Guest Post on TechCrunch with Dofollow Backlink
 
 <div class="buttons">
 
-<a href="#" class="btn cart" onclick="addToCart()">
+<button class="btn cart" onclick="addToCart()">
 🛒 Add To Cart
-</a>
+</button>
 
 <a href="cart.html" class="btn buy">
 ⚡ Buy Now
@@ -242,20 +242,15 @@ Permanent Guest Post on TechCrunch with Dofollow Backlink
 function addToCart(){
 
 let product={
-
-name:"TechCrunch Guest Post",
-
-price:500,
-
-country:"USA",
-
-category:"Technology"
-
+    name:"TechCrunch Guest Post",
+    price:500,
+    country:"USA",
+    category:"Technology"
 };
 
-localStorage.setItem("cart",JSON.stringify(product));
+localStorage.setItem("cart", JSON.stringify(product));
 
-alert("Product Added To Cart!");
+alert("Product Added Successfully!");
 
 window.location.href="cart.html";
 
