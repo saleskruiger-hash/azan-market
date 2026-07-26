@@ -125,15 +125,13 @@ AZAN MARKET Dashboard
 
 let user = localStorage.getItem("fullname");
 
-if(user == null){
+if(user){
 
-alert("Please login first.");
-
-window.location.href="login.html";
+document.getElementById("username").innerHTML = user;
 
 }else{
 
-document.getElementById("username").innerHTML = user;
+document.getElementById("username").innerHTML = "Guest";
 
 }
 
