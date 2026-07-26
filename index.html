@@ -6,6 +6,7 @@
 <title>AZAN MARKET</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -19,23 +20,64 @@ color:#222;
 }
 
 header{
-background:#111827;
-padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:18px 60px;
+background:#111827;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
+display:flex;
+align-items:center;
+}
+
+.logo img{
+height:75px;
+}
+
+nav{
+display:flex;
+gap:25px;
 }
 
 nav a{
 color:#fff;
 text-decoration:none;
-margin-left:20px;
 font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.header-buttons{
+display:flex;
+gap:12px;
+}
+
+.header-buttons a{
+text-decoration:none;
+padding:10px 18px;
+border-radius:8px;
+font-weight:bold;
+color:#fff;
+}
+
+.login-btn{
+background:#2563eb;
+}
+
+.register-btn{
+background:#10b981;
+}
+
+.cart-btn{
+background:#f59e0b;
 }
 
 .hero{
@@ -46,19 +88,22 @@ color:#fff;
 }
 
 .hero h1{
-font-size:55px;
+font-size:56px;
 margin-bottom:20px;
 }
 
 .hero p{
 font-size:22px;
-margin-bottom:30px;
+margin-bottom:35px;
 }
 
 .search{
 display:flex;
 max-width:700px;
 margin:auto;
+overflow:hidden;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
 .search input{
@@ -66,6 +111,7 @@ flex:1;
 padding:18px;
 border:none;
 font-size:18px;
+outline:none;
 }
 
 .search button{
@@ -73,6 +119,7 @@ padding:18px 35px;
 border:none;
 background:#111827;
 color:white;
+font-size:17px;
 cursor:pointer;
 }
 
@@ -80,7 +127,7 @@ section{
 padding:70px 8%;
 }
 
-h2{
+.section-title{
 text-align:center;
 font-size:42px;
 margin-bottom:40px;
@@ -97,23 +144,47 @@ background:#fff;
 padding:25px;
 border-radius:12px;
 box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+.card p{
+margin-bottom:10px;
 }
 
 .price{
 font-size:28px;
 font-weight:bold;
 color:#2563eb;
-margin:15px 0;
+margin:18px 0;
 }
 
 .buy{
 display:inline-block;
-padding:12px 25px;
+padding:12px 22px;
 background:#2563eb;
 color:#fff;
 text-decoration:none;
 border-radius:8px;
+margin-right:8px;
 }
+
+.details{
+display:inline-block;
+padding:12px 22px;
+background:#10b981;
+color:#fff;
+text-decoration:none;
+border-radius:8px;
+}
+
 .testimonials{
 background:#fff;
 }
@@ -128,11 +199,10 @@ gap:30px;
 background:#f8fafc;
 padding:30px;
 border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+box-shadow:0 6px 15px rgba(0,0,0,.08);
 }
 
 .testimonial p{
-font-size:18px;
 line-height:1.6;
 margin-bottom:20px;
 }
@@ -143,7 +213,6 @@ color:#2563eb;
 
 .contact{
 background:#fff;
-text-align:center;
 }
 
 .contact form{
@@ -155,7 +224,7 @@ margin:auto;
 .contact textarea{
 width:100%;
 padding:15px;
-margin-bottom:20px;
+margin-bottom:18px;
 border:1px solid #ddd;
 border-radius:8px;
 font-size:16px;
@@ -164,211 +233,132 @@ font-size:16px;
 .contact button{
 background:#2563eb;
 color:#fff;
-padding:15px 40px;
 border:none;
+padding:15px 35px;
 border-radius:8px;
-cursor:pointer;
 font-size:18px;
+cursor:pointer;
 }
 
 footer{
 background:#111827;
-color:#fff;
+color:white;
 text-align:center;
 padding:25px;
 }
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 60px;
-    background:#101827;
-}
 
-.logo img{
-    height:80px;
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:20px;
+padding:20px;
 }
 
 nav{
-    display:flex;
-    gap:25px;
-}
-
-nav a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#38bdf8;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .header-buttons{
-    display:flex;
-    gap:10px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.header-buttons a{
-    text-decoration:none;
-    padding:10px 18px;
-    border-radius:6px;
-    font-weight:bold;
+.hero h1{
+font-size:40px;
 }
 
-.login-btn{
-    background:#2563eb;
-    color:white;
+.search{
+flex-direction:column;
 }
 
-.register-btn{
-    background:#10b981;
-    color:white;
+.search button{
+width:100%;
 }
 
-.cart-btn{
-    background:#f59e0b;
-    color:white;
-}
-.login-page{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#f4f7fb;
-    padding:40px;
-}
-
-.login-box{
-    width:400px;
-    background:#fff;
-    padding:35px;
-    border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-}
-
-.login-box h2{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.login-box input{
-    width:100%;
-    padding:14px;
-    margin-bottom:15px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-size:16px;
-}
-
-.login-box button{
-    width:100%;
-    padding:14px;
-    background:#2563eb;
-    color:#fff;
-    border:none;
-    border-radius:8px;
-    font-size:17px;
-    cursor:pointer;
-}
-
-.login-box p{
-    text-align:center;
-    margin-top:20px;
-}
-
-.login-box a{
-    color:#2563eb;
-    text-decoration:none;
-    font-weight:bold;
 }
 
 </style>
+
 </head>
+
 <body>
 
 <header>
-    <div class="logo">
-        <img src="26e1d55b-9227-43f1-99e2-15b646eb85e7.png" alt="Azan Market Logo">
-    </div>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Websites</a>
-        <a href="#">Categories</a>
-        <a href="#">Contact</a>
-    </nav>
+<div class="logo">
+<img src="26e1d55b-9227-43f1-99e2-15b646eb85e7.png" alt="AZAN MARKET">
+</div>
 
-    <div class="header-buttons">
-        <a href="login.html" class="login-btn">Login</a>
-        <a href="register.html" class="register-btn">Register</a>
-        <a href="#" class="cart-btn">🛒 Cart</a>
-    </div>
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Websites</a>
+
+<a href="#">Categories</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+<div class="header-buttons">
+
+<a href="login.html" class="login-btn">Login</a>
+
+<a href="register.html" class="register-btn">Register</a>
+
+<a href="cart.html" class="cart-btn">🛒 Cart</a>
+
+</div>
+
 </header>
 
 <section class="hero">
+
 <h1>Global Guest Post Marketplace</h1>
+
 <p>Buy High Authority Guest Posts From Trusted Publishers</p>
 
 <div class="search">
-<input type="text" id="searchBox" placeholder="Search Websites..." onkeyup="searchProducts()">
-<button onclick="searchProducts()">Search</button>
+
+<input
+type="text"
+id="searchBox"
+placeholder="Search Website, Country or Category..."
+onkeyup="searchProducts()">
+
+<button onclick="searchProducts()">
+Search
+</button>
+
 </div>
+
 </section>
 
 <section>
-<h2>Featured Websites</h2>
+
+<h2 class="section-title">
+Featured Websites
+</h2>
+
+<div
+class="grid"
+id="productList">
+
+<!-- Products will load here -->
+
+</div>
+
+</section>
+<section>
+
+<h2 class="section-title">
+Browse Categories
+</h2>
 
 <div class="grid">
-
-<div class="card">
-<h3>🔥 TechCrunch</h3>
-
-<p><strong>Country:</strong> USA</p>
-
-<p><strong>Category:</strong> Technology</p>
-
-<p><strong>DA:</strong> 93</p>
-
-<p><strong>Traffic:</strong> 14M+</p>
-
-<p>⭐⭐⭐⭐⭐ (5.0)</p>
-
-<div class="price">$500</div>
-
-<a class="buy" href="#">Buy Now</a>
-
-<a class="buy" style="background:#10b981;margin-left:10px;" href="details.html">View Details</a>
-
-</div>
-
-<div class="card">
-<h3>Mashable</h3>
-<p>USA</p>
-<p>DA: 92</p>
-<p>Traffic: 18M+</p>
-<div class="price">$350</div>
-<a class="buy" href="#">Buy Now</a>
-</div>
-
-<div class="card">
-<h3>CelebReports.de</h3>
-<p>Germany</p>
-<p>DA: 67</p>
-<p>Traffic: 280K+</p>
-<div class="price">$150</div>
-<a class="buy" href="#">Buy Now</a>
-</div>
-
-</div>
-
-</section>
-<section>
-
-<h2>Browse Categories</h2>
-
-<div class="grid" id="productList">
 
 <div class="card">
 <h3>Technology</h3>
@@ -406,23 +396,38 @@ nav a:hover{
 
 <section>
 
-<h2>Why Choose Azan Market?</h2>
+<h2 class="section-title">
+Why Choose AZAN MARKET?
+</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>High Authority Websites</h3>
-<p>Access thousands of trusted websites with real traffic.</p>
+<p>
+Access thousands of trusted publishers with real organic traffic.
+</p>
 </div>
 
 <div class="card">
 <h3>Fast Delivery</h3>
-<p>Most guest posts are published within 24-72 hours.</p>
+<p>
+Most guest posts are published within 24-72 hours.
+</p>
 </div>
 
 <div class="card">
 <h3>Secure Payments</h3>
-<p>Safe ordering with transparent pricing.</p>
+<p>
+Transparent pricing with a simple ordering process.
+</p>
+</div>
+
+<div class="card">
+<h3>24/7 Support</h3>
+<p>
+Our support team is always available to help buyers and sellers.
+</p>
 </div>
 
 </div>
@@ -431,23 +436,31 @@ nav a:hover{
 
 <section>
 
-<h2>How It Works</h2>
+<h2 class="section-title">
+How It Works
+</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>1. Choose Website</h3>
-<p>Select the best website for your niche.</p>
+<h3>1. Search Website</h3>
+<p>
+Search any website by name, country or category.
+</p>
 </div>
 
 <div class="card">
 <h3>2. Place Order</h3>
-<p>Submit your order with anchor text and URL.</p>
+<p>
+Submit your website URL, anchor text and target URL.
+</p>
 </div>
 
 <div class="card">
 <h3>3. Get Published</h3>
-<p>Your article is published by the publisher.</p>
+<p>
+Publisher reviews your order and publishes your guest post.
+</p>
 </div>
 
 </div>
@@ -456,23 +469,46 @@ nav a:hover{
 
 <section class="testimonials">
 
-<h2>What Our Clients Say</h2>
+<h2 class="section-title">
+What Our Clients Say
+</h2>
 
 <div class="testimonial-grid">
 
 <div class="testimonial">
-<p>"Excellent service! Published within 48 hours."</p>
-<h4>John Smith</h4>
+
+<p>
+"Excellent marketplace. Fast delivery and high quality websites."
+</p>
+
+<h4>
+John Smith
+</h4>
+
 </div>
 
 <div class="testimonial">
-<p>"Very professional support and quality websites."</p>
-<h4>Sarah Johnson</h4>
+
+<p>
+"Professional support team and transparent pricing."
+</p>
+
+<h4>
+Sarah Johnson
+</h4>
+
 </div>
 
 <div class="testimonial">
-<p>"Affordable pricing and fast delivery."</p>
-<h4>Michael Brown</h4>
+
+<p>
+"The best guest posting marketplace I've used."
+</p>
+
+<h4>
+Michael Brown
+</h4>
+
 </div>
 
 </div>
@@ -481,17 +517,27 @@ nav a:hover{
 
 <section class="contact">
 
-<h2>Contact Us</h2>
+<h2 class="section-title">
+Contact Us
+</h2>
 
 <form>
 
-<input type="text" placeholder="Your Name">
+<input
+type="text"
+placeholder="Your Name">
 
-<input type="email" placeholder="Your Email">
+<input
+type="email"
+placeholder="Your Email">
 
-<textarea rows="5" placeholder="Your Message"></textarea>
+<textarea
+rows="6"
+placeholder="Your Message"></textarea>
 
-<button type="submit">Send Message</button>
+<button type="submit">
+Send Message
+</button>
 
 </form>
 
@@ -499,12 +545,45 @@ nav a:hover{
 
 <footer>
 
-<p>© 2026 AZAN MARKET. All Rights Reserved.</p>
+<p>
+© 2026 AZAN MARKET. All Rights Reserved.
+</p>
 
 </footer>
 <script>
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
+
+/* Default products if admin has not added any */
+
+if(products.length===0){
+
+products=[
+
+{
+website:"TechCrunch",
+country:"USA",
+category:"Technology",
+price:"500"
+},
+
+{
+website:"Mashable",
+country:"USA",
+category:"Technology",
+price:"350"
+},
+
+{
+website:"CelebReports.de",
+country:"Germany",
+category:"News",
+price:"150"
+}
+
+];
+
+}
 
 showProducts(products);
 
@@ -512,15 +591,16 @@ function showProducts(list){
 
 let html="";
 
-if(list.length==0){
+if(list.length===0){
 
-html="<h3>No website found.</h3>";
+html="<h2 style='text-align:center;'>No Website Found.</h2>";
 
 }else{
 
 list.forEach(function(p){
 
 html+=`
+
 <div class="card">
 
 <h3>${p.website}</h3>
@@ -531,31 +611,52 @@ html+=`
 
 <div class="price">$${p.price}</div>
 
-<a class="buy" href="details.html">View Details</a>
+<a class="buy" href="checkout.html">
+Buy Now
+</a>
 
-<a class="buy" style="background:#10b981;margin-left:10px;" href="checkout.html">Buy Now</a>
+<a class="details" href="details.html">
+View Details
+</a>
 
 </div>
+
 `;
 
 });
 
 }
 
-document.getElementById("productList").innerHTML = html;
+document.getElementById("productList").innerHTML=html;
 
 }
 
 function searchProducts(){
 
-let keyword=document.getElementById("searchBox").value.toLowerCase();
+let keyword=document
+.getElementById("searchBox")
+.value
+.toLowerCase()
+.trim();
+
+if(keyword===""){
+
+showProducts(products);
+
+return;
+
+}
 
 let filtered=products.filter(function(p){
 
 return(
+
 p.website.toLowerCase().includes(keyword) ||
+
 p.country.toLowerCase().includes(keyword) ||
+
 p.category.toLowerCase().includes(keyword)
+
 );
 
 });
@@ -565,5 +666,6 @@ showProducts(filtered);
 }
 
 </script>
+
 </body>
 </html>
