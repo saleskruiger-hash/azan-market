@@ -320,7 +320,7 @@ nav a:hover{
 <section>
 <h2>Featured Websites</h2>
 
-<div class="grid">
+<div class="grid" id="productGrid">
 
 <div class="card">
 <h3>🔥 TechCrunch</h3>
@@ -502,6 +502,40 @@ nav a:hover{
 <p>© 2026 AZAN MARKET. All Rights Reserved.</p>
 
 </footer>
+<script>
 
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+if(products.length > 0){
+
+let html = "";
+
+products.forEach(function(p){
+
+html += `
+<div class="card">
+
+<h3>${p.website}</h3>
+
+<p><strong>Country:</strong> ${p.country}</p>
+
+<p><strong>Category:</strong> ${p.category}</p>
+
+<div class="price">$${p.price}</div>
+
+<a class="buy" href="details.html">View Details</a>
+
+<a class="buy" style="background:#10b981;margin-left:10px;" href="checkout.html">Buy Now</a>
+
+</div>
+`;
+
+});
+
+document.getElementById("productGrid").innerHTML = html;
+
+}
+
+</script>
 </body>
 </html>
